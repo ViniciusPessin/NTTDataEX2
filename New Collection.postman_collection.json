@@ -1,0 +1,42 @@
+{
+	"info": {
+		"_postman_id": "332cf69c-f87b-4722-8a90-cf95bef05ab0",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "consultaCEP",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cep\" : \"14801749\"\r\n}"
+				},
+				"url": {
+					"raw": "https://apps.correios.com.br/SigepMasterJPA/AtendeClienteService/AtendeCliente",
+					"protocol": "https",
+					"host": [
+						"apps",
+						"correios",
+						"com",
+						"br"
+					],
+					"path": [
+						"SigepMasterJPA",
+						"AtendeClienteService",
+						"AtendeCliente"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "body",
+			"value": "<Envelope xmlns=\"http://schemas.xmlsoap.org/soap/envelope/\">\n    <Body>\n        <consultaCEP xmlns=\"http://cliente.bean.master.sigep.bsb.correios.com.br/\">\n            <cep xmlns=\"\">{{CEP}}</cep>\n        </consultaCEP>\n    </Body>\n</Envelope>"
+		}
+	]
+}
